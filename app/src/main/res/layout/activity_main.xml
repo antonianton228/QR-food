@@ -7,14 +7,138 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/scanBut"
-        android:layout_centerInParent="true"
+        android:id="@+id/allGlueBut"
+        android:layout_width="223dp"
+        android:layout_height="87dp"
+        android:layout_below="@+id/kkalNeed"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="179dp"
+        android:layout_marginTop="-280dp"
+        android:layout_marginEnd="9dp"
+        android:text="Изменить максимальное количесство сахара" />
+
+    <Button
+        android:id="@+id/todayGlueBut"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/KkalToday"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="-273dp"
+        android:text="Добавить сахар" />
+
+    <ProgressBar
+        android:id="@+id/glueProg"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="159dp"
+        android:layout_height="147dp"
+        android:layout_below="@+id/allGlueBut"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="124dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="128dp"
+        android:background="@drawable/circle"
+        android:indeterminate="false"
+        android:max="100"
+        android:progress="80"
+        android:progressDrawable="@drawable/progress" />
+
+    <ProgressBar
+        android:id="@+id/kkalProg"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="177dp"
+        android:layout_height="177dp"
+        android:layout_above="@+id/scanBut"
+        android:layout_below="@+id/kkalNeed"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="119dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="115dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/circle"
+        android:indeterminate="false"
+        android:max="100"
+        android:progress="100"
+        android:progressDrawable="@drawable/progress" />
+
+    <TextView
+        android:id="@+id/kkalNeed"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="scan"></Button>
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="316dp"
+        android:layout_marginEnd="56dp"
+        android:text="Ещё можно 1 Ккал" />
 
+    <Button
+        android:id="@+id/scanBut"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="21dp"
+        android:layout_marginEnd="21dp"
+        android:layout_marginBottom="40dp"
+        android:text="ScanNewFood"></Button>
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="217dp"
+        android:text="За сегодня 33г сахара" />
 
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="88dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="54dp"
+        android:text="Ещё можно 10 г." />
+
+    <TextView
+        android:id="@+id/KkalToday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="321dp"
+        android:layout_marginEnd="255dp"
+        android:text="За сегодня 33Ккал" />
+
+    <Button
+        android:id="@+id/allKkalBut"
+        android:layout_width="223dp"
+        android:layout_height="87dp"
+        android:layout_below="@+id/kkalNeed"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="179dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="9dp"
+        android:text="Изменить максимальное количесство ккал" />
+
+    <Button
+        android:id="@+id/todayKkalBut"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/KkalToday"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="28dp"
+        android:text="Добавить каллорий" />
 
 
 </RelativeLayout>
