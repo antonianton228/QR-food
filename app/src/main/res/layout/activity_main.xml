@@ -1,144 +1,222 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/allGlueBut"
-        android:layout_width="223dp"
-        android:layout_height="87dp"
-        android:layout_below="@+id/kkalNeed"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="179dp"
-        android:layout_marginTop="-280dp"
-        android:layout_marginEnd="9dp"
-        android:text="Изменить максимальное количесство сахара" />
 
-    <Button
-        android:id="@+id/todayGlueBut"
-        android:layout_width="140dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/KkalToday"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="-273dp"
-        android:text="Добавить сахар" />
+    <ScrollView
+        android:layout_width="411dp"
+        android:layout_height="684dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="150dp"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <ProgressBar
-        android:id="@+id/glueProg"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="159dp"
-        android:layout_height="147dp"
-        android:layout_below="@+id/allGlueBut"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="124dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="128dp"
-        android:background="@drawable/circle"
-        android:indeterminate="false"
-        android:max="100"
-        android:progress="80"
-        android:progressDrawable="@drawable/progress" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:scrollbars="horizontal|vertical">
 
-    <ProgressBar
-        android:id="@+id/kkalProg"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="177dp"
-        android:layout_height="177dp"
-        android:layout_above="@+id/scanBut"
-        android:layout_below="@+id/kkalNeed"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="119dp"
-        android:layout_marginTop="120dp"
-        android:layout_marginEnd="115dp"
-        android:layout_marginBottom="10dp"
-        android:background="@drawable/circle"
-        android:indeterminate="false"
-        android:max="100"
-        android:progress="100"
-        android:progressDrawable="@drawable/progress" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="67dp"
+                android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/kkalNeed"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="316dp"
-        android:layout_marginEnd="56dp"
-        android:text="Ещё можно 1 Ккал" />
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
 
-    <Button
-        android:id="@+id/scanBut"
-        android:layout_width="370dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="21dp"
-        android:layout_marginEnd="21dp"
-        android:layout_marginBottom="40dp"
-        android:text="ScanNewFood"></Button>
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="31dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginEnd="71dp"
+                    android:text="За сегодня 33г сахара" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="13dp"
-        android:layout_marginEnd="217dp"
-        android:text="За сегодня 33г сахара" />
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="88dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="72dp"
+                    android:text="Ещё можно 10 г." />
+            </LinearLayout>
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="88dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="7dp"
-        android:layout_marginEnd="54dp"
-        android:text="Ещё можно 10 г." />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/KkalToday"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="33dp"
-        android:layout_marginTop="321dp"
-        android:layout_marginEnd="255dp"
-        android:text="За сегодня 33Ккал" />
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
 
-    <Button
-        android:id="@+id/allKkalBut"
-        android:layout_width="223dp"
-        android:layout_height="87dp"
-        android:layout_below="@+id/kkalNeed"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="179dp"
-        android:layout_marginTop="18dp"
-        android:layout_marginEnd="9dp"
-        android:text="Изменить максимальное количесство ккал" />
+                <Button
+                    android:id="@+id/todayGlueBut"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="44dp"
+                    android:layout_marginEnd="27dp"
+                    android:text="Добавить сахар"
+                    app:backgroundTint="#2855e7"
+                    app:rippleColor="#CC0000" />
 
-    <Button
-        android:id="@+id/todayKkalBut"
-        android:layout_width="140dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/KkalToday"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="28dp"
-        android:text="Добавить каллорий" />
+                <Button
+                    android:id="@+id/allGlueBut"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="19dp"
+                    android:layout_marginEnd="12dp"
+                    android:text="Изменить максимальное количесство сахара"
+                    app:backgroundTint="#6bd5b1" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ProgressBar
+                    android:id="@+id/glueProg"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="330dp"
+                    android:layout_height="330dp"
+                    android:background="@drawable/circle"
+                    android:indeterminate="false"
+                    android:max="100"
+                    android:progress="80"
+                    android:progressDrawable="@drawable/progress"
+                    android:scaleX="1"
+                    android:scaleY="1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:layout_editor_absoluteY="0dp" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="16dp"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/KkalToday"
+                    android:layout_width="104dp"
+                    android:layout_height="57dp"
+                    android:layout_marginStart="22dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="82dp"
+                    android:text="За сегодня 33Ккал" />
+
+                <TextView
+                    android:id="@+id/kkalNeed"
+                    android:layout_width="174dp"
+                    android:layout_height="65dp"
+                    android:layout_marginStart="22dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="82dp"
+                    android:layout_weight="1"
+                    android:text="За сегодня 33Ккал" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="13dp"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:id="@+id/todayKkalBut"
+                    android:layout_width="138dp"
+                    android:layout_height="59dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginBottom="21dp"
+                    android:text="Добавить каллорий"
+                    app:backgroundTint="#2855e7" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:id="@+id/allKkalBut"
+                    android:layout_width="189dp"
+                    android:layout_height="wrap_content"
+                    android:text="Изменить максимальное количесство ккал"
+                    app:backgroundTint="#6bd5b1" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="396dp">
+
+                <ProgressBar
+                    android:id="@+id/kkalProg"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="366dp"
+                    android:layout_height="330dp"
+                    android:background="@drawable/circle"
+                    android:indeterminate="false"
+                    android:max="100"
+                    android:progress="100"
+                    android:progressDrawable="@drawable/progress"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:layout_editor_absoluteY="33dp" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <Button
+                android:id="@+id/scanBut"
+                android:layout_width="370dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="ScanNewFood"
+                app:backgroundTint="#2855e7">
+
+            </Button>
+
+        </LinearLayout>
+    </ScrollView>
 
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
